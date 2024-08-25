@@ -1,11 +1,10 @@
-//This function return a date in format string
-
 import { generateFormat } from "../helpers/createFormat"
 import { ISocialFormat } from "../interface/easyInterfaces"
 
+//This function return a date in format string
 type formatType = "short" | "long" //Type format return
 
-export const getEasyDate = (date: Date, format: formatType): string=>{
+export const getEasyDate = (date: Date, format: formatType = "short"): string=>{
     if(format === "short"){
         return `${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`
     }else{
