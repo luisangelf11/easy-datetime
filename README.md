@@ -51,8 +51,8 @@ import { getEasyDate } from 'easy-datetime-ya'
 const myObjectDate = new Date('2024-08-24T18:55:10')
 
 console.log(getEasyDate(myObjectDate, "long", "ESP"))
-console.log(getEasyDate(today, "long"))
-console.log(getEasyDate(today))
+console.log(getEasyDate(myObjectDate, "long"))
+console.log(getEasyDate(myObjectDate))
 ```
 
 ## getEasyTime
