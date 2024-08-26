@@ -2,7 +2,7 @@ import { generateFormatEng, generateFormatEsp } from "./helpers/createFormat";
 import { generateTimes } from "./helpers/createTimes";
 import { IStructureDateTime } from "./interface/easyInterfaces";
 
-//This function return a date in format string
+//This function return a date in string format
 type formatType = "short" | "long"; //Type format return
 
 export const getEasyDate = (
@@ -10,7 +10,7 @@ export const getEasyDate = (
   format: formatType = "short",
   lang: langType = "ENG"
 ): string => {
-  const mount = date.getMonth();
+  const mount = date.getMonth() + 1;
   const fullyear = date.getFullYear();
   const days = date.getDate();
   if (format === "short") {
@@ -19,15 +19,15 @@ export const getEasyDate = (
     }`;
   } else {
     const weekday = `${date.toLocaleDateString(lang, { weekday: "long" })}`;
-    const month = `${date.toLocaleDateString(lang, { month: "long" })}`;
+    const months = `${date.toLocaleDateString(lang, { month: "long" })}`;
     const day = `${date.toLocaleDateString(lang, { day: "2-digit" })}`;
     return `${weekday} ${day} ${
       lang === "ESP" ? "de " : ""
-    }${month}`.toLowerCase();
+    }${months}`.toLowerCase();
   }
 };
 
-//This fuction return a time in format string
+//This fuction return a time in string format
 export const getEasyTime = (date: Date): string => {
   const hours = date.getHours();
   const min = date.getMinutes();
