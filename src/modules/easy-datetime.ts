@@ -7,7 +7,8 @@ type formatType = "short" | "long"; //Type format return
 
 export const getEasyDate = (
   date: Date,
-  format: formatType = "short"
+  format: formatType = "short",
+  lang: langType = "ENG"
 ): string => {
   const mount = date.getMonth();
   const fullyear = date.getFullYear();
@@ -17,7 +18,10 @@ export const getEasyDate = (
       days <= 9 ? `0${days}` : days
     }`;
   } else {
-    return `${date.toDateString()}`;
+    const weekday =  `${date.toLocaleDateString(lang, { weekday: 'long' })}`;
+    const month =  `${date.toLocaleDateString(lang, { month: 'long' })}`
+    const day =  `${date.toLocaleDateString(lang, { day: '2-digit' })}`
+    return `${weekday} ${day} ${lang === 'ESP'? 'de ': ''}${month}`.toLowerCase()
   }
 };
 
