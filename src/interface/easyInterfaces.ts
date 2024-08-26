@@ -3,7 +3,7 @@ export interface IStructureDateTime {
     days: number
     years: number
     weeks: number
-    mounths: number,
+    months: number,
     hours: number,
     minutes: number,
     seconds: number
@@ -13,7 +13,7 @@ export interface IConvert{
     days: number
     years: number
     weeks: number
-    mounths: number,
+    months: number,
     hours: number,
     minutes: number,
     seconds: number

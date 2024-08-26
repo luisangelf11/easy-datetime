@@ -8,12 +8,12 @@ export const generateTimes = (stampToday: number, stampDate: number): IConvert =
   const weeks = Math.floor(
     (stampToday - stampDate) / (1000 * 60 * 60 * 24 * 7)
   );
-  const mounths = Math.floor(
+  const months = Math.floor(
     (stampToday - stampDate) / (1000 * 60 * 60 * 24 * 30)
   );
   const years = Math.floor(
     (stampToday - stampDate) / (1000 * 60 * 60 * 24 * 365)
   );
 
-  return { seconds, minutes, hours, days, weeks, mounths, years };
+  return { seconds, minutes, hours, days, weeks, months, years };
 };

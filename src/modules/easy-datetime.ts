@@ -47,7 +47,7 @@ export const getEasyFormat = (
   const stampToday = today.getTime();
   const stampDate = date.getTime();
   //Get seconds, minutes, hours, days, weeks, mounths, years
-  const {seconds, minutes, hours, days, weeks, mounths, years} = generateTimes(stampToday, stampDate)
+  const {seconds, minutes, hours, days, weeks, months, years} = generateTimes(stampToday, stampDate)
   //Validate format
   if (lang === "ENG")
     return generateFormatEng({
@@ -56,7 +56,7 @@ export const getEasyFormat = (
       hours,
       days,
       weeks,
-      mounths,
+      months,
       years,
     });
   else
@@ -66,7 +66,7 @@ export const getEasyFormat = (
       hours,
       days,
       weeks,
-      mounths,
+      months,
       years,
     });
 };
@@ -78,7 +78,7 @@ export const getEasyDateTimeStructure = (date: Date): IStructureDateTime => {
   const stampToday = today.getTime();
   const stampDate = date.getTime();
   //Get seconds, minutes, hours, days, weeks, mounths, years
- const {seconds, minutes, hours, days, weeks, mounths, years} = generateTimes(stampToday, stampDate)
+ const {seconds, minutes, hours, days, weeks, months, years} = generateTimes(stampToday, stampDate)
   return {
     datetime: date,
     seconds,
@@ -86,7 +86,7 @@ export const getEasyDateTimeStructure = (date: Date): IStructureDateTime => {
     hours,
     days,
     weeks,
-    mounths,
+    months,
     years,
   };
 };

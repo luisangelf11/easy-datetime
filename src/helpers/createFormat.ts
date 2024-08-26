@@ -2,7 +2,7 @@ import { IConvert } from "../interface/easyInterfaces";
 
 export const generateFormatEng =(value: IConvert):string | undefined=>{
     if(value.years >= 1) return`${value.years} ${value.years === 1? 'year': 'years'}`
-    if(value.mounths >= 1) return`${value.mounths} ${value.mounths === 1? 'mounth': 'mounths'}`
+    if(value.months >= 1) return`${value.months} ${value.months === 1? 'month': 'months'}`
     if(value.weeks >=1 ) return `${value.weeks} ${value.weeks === 1? 'week': 'weeks'}`
     if(value.days >=1 ) return `${value.days} ${value.days === 1? 'day': 'days'}`
     if(value.hours >=1 ) return `${value.hours} ${value.hours === 1? 'hr': 'hrs'}`
@@ -13,7 +13,7 @@ export const generateFormatEng =(value: IConvert):string | undefined=>{
 
 export const generateFormatEsp =(value: IConvert):string | undefined=>{
     if(value.years >= 1) return`${value.years} ${value.years === 1? 'año': 'años'}`
-    if(value.mounths >= 1) return`${value.mounths} ${value.mounths === 1? 'mes': 'meses'}`
+    if(value.months >= 1) return`${value.months} ${value.months === 1? 'mes': 'meses'}`
     if(value.weeks >=1 ) return `${value.weeks} ${value.weeks === 1? 'semana': 'semanas'}`
     if(value.days >=1 ) return `${value.days} ${value.days === 1? 'día': 'días'}`
     if(value.hours >=1 ) return `${value.hours} ${value.hours === 1? 'hr': 'hrs'}`
