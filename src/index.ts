@@ -10,6 +10,7 @@ export const getEasyDate = (
   format: formatType = "short",
   lang: langType = "ENG"
 ): string => {
+  if(!(date instanceof Date)) throw new Error(`The date params is not a date object`)
   const mount = date.getMonth() + 1;
   const fullyear = date.getFullYear();
   const days = date.getDate();
@@ -29,6 +30,7 @@ export const getEasyDate = (
 
 //This fuction return a time in string format
 export const getEasyTime = (date: Date): string => {
+  if(!(date instanceof Date)) throw new Error(`The date params is not a date object`)
   const hours = date.getHours();
   const min = date.getMinutes();
   const sec = date.getSeconds();
@@ -44,6 +46,7 @@ export const getEasyFormat = (
   date: Date,
   lang: langType = "ENG"
 ): string | undefined => {
+  if(!(date instanceof Date)) throw new Error(`The date params is not a date object`)
   const today = new Date();
   //Get timeStamp
   const stampToday = today.getTime();
@@ -78,6 +81,7 @@ export const getEasyFormat = (
 
 //This function return a objetct with the structure of the datetime
 export const getEasyDateTimeStructure = (date: Date): IStructureDateTime => {
+  if(!(date instanceof Date)) throw new Error(`The date params is not a date object`)
   const today = new Date();
   //Get timeStamp
   const stampToday = today.getTime();

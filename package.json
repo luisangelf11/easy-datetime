@@ -1,6 +1,6 @@
 {
   "name": "easy-datetime-ya",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node dist/index.js\" ",

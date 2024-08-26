@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/luisangelf11/easy-datetime)
 
 Easy-DateTime-Ya is a library for get the format from a date objtect JavaScript. It is easy to use and allows us to work very quickly.
+
+Repository: https://github.com/luisangelf11/easy-datetime
  
 
 ## Why use this library?
@@ -50,9 +52,14 @@ import { getEasyDate } from 'easy-datetime-ya'
 
 const myObjectDate = new Date('2024-08-24T18:55:10')
 
+//use
 console.log(getEasyDate(myObjectDate, "long", "ESP"))
 console.log(getEasyDate(myObjectDate, "long"))
 console.log(getEasyDate(myObjectDate))
+console.log(getEasyDate(new Date('2024-08-24T18:55:10')))
+
+//error type params
+console.log(getEasyDate('2024-08-24T18:55:10'))
 ```
 
 ## getEasyTime
@@ -66,7 +73,12 @@ import { getEasyTime } from 'easy-datetime-ya'
 
 const myObjectDate = new Date('2024-08-24T18:55:10')
 
+//use
 console.log(getEasyTime(myObjectDate))
+console.log(getEasyTime(new Date('2024-08-24T18:55:10')))
+
+//error type params
+console.log(getEasyTime('2024-08-24T18:55:10'))
 ```
 
 ## getEasyFormat
@@ -84,8 +96,13 @@ import { getEasyFormat } from 'easy-datetime-ya'
 
 const myObjectDate = new Date('2024-08-24T18:55:10')
 
+//use
 console.log(getEasyFormat(myObjectDate, "ESP")) 
-console.log(getEasyFormat(myObjectDate)) 
+console.log(getEasyFormat(myObjectDate))
+console.log(getEasyFormat(new Date('2024-08-24T18:55:10')))
+
+//error type params
+console.log(getEasyFormat('2024-08-24T18:55:10'))
 ```
 
 ## getEasyDateTimeStructure
@@ -99,7 +116,13 @@ import { getEasyDateTimeStructure } from 'easy-datetime-ya'
 
 const myObjectDate = new Date('2024-08-24T18:55:10')
 
+//use
 console.log(getEasyDateTimeStructure(myObjectDate))
+console.log(getEasyDateTimeStructure(new Date('2024-08-24T18:55:10')))
+
+//error type params
+console.log(getEasyDateTimeStructure('2024-08-24T18:55:10'))
+
 ```
 
 #### Object Returned (Properties)
