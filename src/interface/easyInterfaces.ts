@@ -1,6 +1,5 @@
-export interface ISocialFormat {
+export interface IStructureDateTime {
     datetime: Date
-    format: string | undefined
     days: number
     years: number
     weeks: number

@@ -1,9 +1,8 @@
-import {getEasyDate, getEasyTime, getEasyFormat} from './modules/easy-datetime'
+import {getEasyDate, getEasyTime, getEasyFormat, getEasyDateTimeStructure} from './modules/easy-datetime'
 
-const today = new Date('2020-07-04T17:10:00')
+const today = new Date('2024-08-24T20:10:00')
 console.log(getEasyFormat(today))
-console.log(getEasyDate(today, "short"))
-console.log(getEasyDate(today, "long"))
-console.log(getEasyDate(today))
-console.log(getEasyTime(today))
+console.log(getEasyFormat(today, "ESP"))
+console.log(getEasyDateTimeStructure(today))
+
 
