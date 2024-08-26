@@ -1,14 +1,16 @@
 {
-  "name": "easy-datetime",
+  "name": "easy-datetime-js",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"node dist/index.js\" "
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\" ",
+    "start": "node ./dist/index.js",
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luis Angel Fernandez",
   "license": "ISC",
-  "description": "",
+  "description": "a library that allows formatting the date object",
   "devDependencies": {
     "tsc-watch": "^6.2.0",
     "typescript": "^5.5.4"
